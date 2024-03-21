@@ -7,16 +7,16 @@ export const apiService = axios.create({
 });
 
 export interface Company {
-  id: number;
+  id?: number;
   companyName: string;
   naceCode: string;
-  gva: number;
-  scope1Emissions: number;
-  scope2Emissions: number;
-  scope3Emissions: number;
+  gva?: number;
+  scope1Emissions?: number;
+  scope2Emissions?: number;
+  scope3Emissions?: number;
 }
 
-export const fetchCompanyEmissions = async (): Promise<Company[]> => {
+export const fetchCompany = async (): Promise<Company[]> => {
   try {
     const response = await apiService.get("/companies");
     return response.data;
