@@ -133,6 +133,7 @@ async function clearInput() {
     <button @click="createCompany">Create</button>
     <button @click="changeCompany">Update</button>
     <button @click="removeCompany">Delete</button>
+    <button style="background-color: #a94dfe;" @click="clearInput">Clear</button>
   </div>
 </template>
 
